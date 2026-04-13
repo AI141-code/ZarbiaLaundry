@@ -150,17 +150,12 @@ export default function Gallery() {
         {/* Video Demo (kept above the slider) */}
         {videoItem && (
           <div className="mb-8">
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 shadow-md">
-              <div className="p-10 sm:p-12 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-700 font-semibold">{videoItem.title}</p>
-                </div>
-              </div>
+            <div className="rounded-2xl overflow-hidden bg-gray-100 shadow-md flex items-center justify-center p-3 sm:p-4">
+              <img
+                src="/video.gif"
+                alt={videoItem.title}
+                className="block w-auto h-auto max-w-full"
+              />
             </div>
           </div>
         )}
