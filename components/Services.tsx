@@ -170,8 +170,11 @@ export default function Services() {
             <span>Our </span>
             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-lg text-gray-600">
-            Professional laundry and cleaning solutions for every need
+          <p className="text-lg text-gray-700">
+            Professional Laundry, Specialized Carpet cleaning, and In-house cleaning solutions
+          </p>
+          <p className="mt-2 text-base text-gray-600 font-semibold text-center" dir="rtl">
+            غسيل احترافي، وتنظيف سجاد متخصص، وحلول تنظيف داخل البيت
           </p>
         </div>
 

@@ -1,11 +1,10 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 
 export default function Contact() {
   const openWhatsApp = () => {
-    window.open('https://wa.me/97450435533?text=Hi%20Zarbia%20Laundry', '_blank')
+    window.open('https://wa.me/97433861144?text=Hi%20Zarbia%20Laundry', '_blank')
   }
 
   return (
@@ -40,13 +39,11 @@ export default function Contact() {
             </p>
 
             <div className="flex justify-center">
-              <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden bg-white border border-sky-100 shadow-sm">
-                <Image
-                  src="/address.jpg"
+              <div className="rounded-2xl overflow-hidden bg-white border border-sky-100 shadow-sm p-2">
+                <img
+                  src="/address_plate.gif"
                   alt="Blue address plate example"
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 640px) 280px, 320px"
+                  className="block w-auto h-auto max-w-full"
                 />
               </div>
             </div>
@@ -78,11 +75,11 @@ export default function Contact() {
             </h3>
             <div className="grid grid-cols-1 gap-4">
               <a
-                href="tel:+97450435533"
+                href="tel:+97433861144"
                 className="block bg-gray-50 rounded-xl p-4 text-center hover:bg-gray-100 transition-colors"
               >
                 <p className="text-sm text-gray-600 mb-1">Main Line</p>
-                <p className="text-2xl font-bold text-primary">+974 5043 5533</p>
+                <p className="text-2xl font-bold text-primary">+974 3386 1144</p>
               </a>
             </div>
           </div>

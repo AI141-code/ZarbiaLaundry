@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   const openWhatsApp = () => {
-    window.open('https://wa.me/97450435533?text=Hi%20Zarbia%20Laundry', '_blank')
+    window.open('https://wa.me/97433861144?text=Hi%20Zarbia%20Laundry', '_blank')
   }
 
   return (

@@ -80,13 +80,13 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">📞</span>
-                <a href="tel:+97450435533" className="text-gray-400 hover:text-white transition-colors">
-                  +974 5043 5533
+                <a href="tel:+97433861144" className="text-gray-400 hover:text-white transition-colors">
+                  +974 3386 1144
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">💬</span>
-                <a href="https://wa.me/97450435533?text=Hi%20Zarbia%20Laundry" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://wa.me/97433861144?text=Hi%20Zarbia%20Laundry" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   Message on WhatsApp
                 </a>
               </li>
