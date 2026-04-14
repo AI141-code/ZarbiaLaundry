@@ -88,7 +88,7 @@ export default function Contact() {
         {/* Additional Info */}
         <div className="mt-12 text-center">
           <p className="text-gray-700 font-semibold mb-4">
-            Operating Hours: Monday - Sunday, 7:00 AM - 10:00 PM
+            Operating Hours: Monday - Sunday, 8:00 AM - 10:00 PM
           </p>
           <p className="text-gray-600">
             We offer same-day pickup service for orders before 12:00 PM

@@ -93,7 +93,7 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">🕐</span>
                 <span className="text-gray-400">
-                  Mon - Sun: 7:00 AM - 10:00 PM
+                  Mon - Sun: 8:00 AM - 10:00 PM
                 </span>
               </li>
             </ul>
