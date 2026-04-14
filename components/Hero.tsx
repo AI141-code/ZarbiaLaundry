@@ -9,25 +9,28 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative w-full py-12 sm:py-20 pb-20 md:pb-12 overflow-hidden">
+    <section id="home" className="relative w-full sm:min-h-[60vh] flex items-center py-8 sm:py-20 pb-2 sm:pb-14 md:pb-12 overflow-hidden">
       {/* Gradient background - Orange to Red */}
       <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-orange-400 to-red-500" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 z-10 text-center md:text-left mb-12 md:mb-0">
-            {/* Logo Badge - Mobile on top, Desktop beside heading */}
-            <div className="md:hidden flex justify-center">
-              <div className="bg-white rounded-full p-4 shadow-lg">
+          <div className="space-y-4 sm:space-y-6 z-10 text-center md:text-left mb-6 md:mb-0">
+            {/* Mobile: logo + headline side-by-side */}
+            <div className="md:hidden flex items-center justify-center gap-4">
+              <div className="bg-white rounded-full p-3 shadow-lg flex-shrink-0">
                 <Image
                   src="/logo.jpg"
                   alt="Zarbia Laundry"
-                  width={80}
-                  height={80}
+                  width={64}
+                  height={64}
                   className="rounded-full"
                 />
               </div>
+              <h1 className="text-3xl font-bold text-white leading-tight text-left">
+                Free Pick-Up &amp; Delivery
+              </h1>
             </div>
 
             {/* Desktop: Logo + Heading side by side */}
@@ -46,18 +49,76 @@ export default function Hero() {
               </h1>
             </div>
 
-            {/* Mobile: Just heading */}
-            <h1 className="md:hidden text-4xl sm:text-5xl font-bold text-white leading-tight text-balance">
-              Free Pick-Up &amp; Delivery
-            </h1>
+            {/* Mobile: heading moved beside logo */}
             
             <p className="text-lg sm:text-xl text-white leading-relaxed">
               Professional Laundry &amp; Cleaning Services — Trusted Since 2015
             </p>
+
+            <p className="text-base sm:text-lg font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 ring-1 ring-white/25 px-3 py-1 text-white">
+                <span aria-hidden="true">✨</span>
+                <span>Specialists in Carpet Cleaning</span>
+              </span>
+            </p>
+
+            {/* Mobile: show illustration right after specialization */}
+            <div className="md:hidden pt-2">
+              {/* Fixed-height wrapper so scaled illustration doesn't reserve full height */}
+              <div className="relative mx-auto h-[190px] w-full max-w-sm">
+                <div className="absolute left-1/2 top-0 -translate-x-1/2 origin-top scale-50">
+                  {/* Animated washing machine illustration */}
+                  <div className="relative w-full max-w-sm">
+                    {/* Background glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-300 to-red-300 rounded-3xl blur-2xl opacity-30 animate-pulse" />
+
+                    {/* Washing machine container */}
+                    <div className="relative bg-white rounded-3xl shadow-2xl p-8 border-2 border-orange-200">
+                      {/* Drum (rotating) */}
+                      <div className="flex justify-center">
+                        <div className="relative w-48 h-48 rounded-full border-8 border-gray-300 bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden shadow-inner">
+                          {/* Spinning animation */}
+                          <div className="absolute inset-4 rounded-full border-4 border-gray-200 animate-spin" style={{ animationDuration: '3s' }}>
+                            <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-gray-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
+                            <div className="absolute top-2 left-1/2 w-2 h-2 bg-gray-300 rounded-full transform -translate-x-1/2" />
+                            <div className="absolute bottom-2 right-1/4 w-2 h-2 bg-gray-300 rounded-full" />
+                          </div>
+
+                          {/* Center dot */}
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-6 h-6 bg-gray-400 rounded-full shadow-md" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Floating bubbles */}
+                      <div className="mt-6 flex justify-around px-4">
+                        {[0, 1, 2].map((i) => (
+                          <div
+                            key={i}
+                            className="w-4 h-4 bg-gradient-to-b from-blue-300 to-blue-200 rounded-full opacity-60 shadow-lg"
+                            style={{
+                              animation: `float 2s ease-in-out infinite`,
+                              animationDelay: `${i * 0.3}s`
+                            }}
+                          />
+                        ))}
+                      </div>
+
+                      {/* Details */}
+                      <div className="mt-6 text-center">
+                        <p className="text-sm font-semibold text-gray-700">Fast & Reliable</p>
+                        <p className="text-xs text-gray-500 mt-1">Professional Care</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Right Animated Visual - Proper spacing on mobile */}
-          <div className="relative h-52 sm:h-72 md:h-96 flex items-center justify-center z-10 mt-8 md:mt-0 mb-8 md:mb-0">
+          {/* Desktop/Tablet Animated Visual */}
+          <div className="hidden md:flex relative h-52 sm:h-72 md:h-96 items-center justify-center z-10 mt-6 md:mt-0 mb-6 md:mb-0">
             {/* Animated washing machine illustration */}
             <div className="relative w-full max-w-sm">
               {/* Background glow */}

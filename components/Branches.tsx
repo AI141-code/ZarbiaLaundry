@@ -12,23 +12,26 @@ const branches = [
     area: '',
     phone: '+974 5099 4422',
     whatsapp: '97450994422',
-    address: 'Al Mansoura, Qatar'
+    address: 'Al Mansoura, Qatar',
+    mapsUrl: 'https://maps.app.goo.gl/Za7nGtBx1vdYxapm6?g_st=aw',
   },
   {
     id: 2,
     name: 'Al Dafna',
-    area: 'Al Jazi Garden',
+    area: '',
     phone: '+974 5043 5533',
     whatsapp: '97450435533',
-    address: 'Al Dafna, Al Jazi Garden, Qatar'
+    address: 'Al Dafna, Qatar',
+    mapsUrl: 'https://maps.app.goo.gl/bVwSktpfugqcMAtq8?g_st=aw',
   },
   {
     id: 3,
-    name: 'Al Wukair',
-    area: 'Ezdan',
+    name: 'Al Wukair / Al Wakra',
+    area: '',
     phone: '+974 7407 6076',
     whatsapp: '97474076076',
-    address: 'Al Wukair, Ezdan, Qatar'
+    address: 'Al Wukair / Al Wakra, Qatar',
+    mapsUrl: 'https://maps.app.goo.gl/y3WPV9qtLTtRYMCc7?g_st=aw',
   },
   {
     id: 4,
@@ -36,7 +39,8 @@ const branches = [
     area: '',
     phone: '+974 3386 1144',
     whatsapp: '97433861144',
-    address: 'Al Shamal, Qatar'
+    address: 'Al Shamal, Qatar',
+    mapsUrl: 'https://maps.app.goo.gl/tiwDWjvn8Z3p9NxXA',
   }
 ]
 
@@ -65,9 +69,8 @@ export default function Branches() {
     window.open(`https://wa.me/${whatsappNumber}?text=Hi%20Zarbia%20Laundry`, '_blank')
   }
 
-  const openMaps = (query: string) => {
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
-    window.open(url, '_blank')
+  const openMaps = (mapsUrl: string) => {
+    window.open(mapsUrl, '_blank')
   }
 
   return (
@@ -98,17 +101,19 @@ export default function Branches() {
               {/* Card Header */}
               <button
                 onClick={() => toggleBranch(branch.id)}
-                className="w-full p-6 text-left hover:bg-gray-50 transition-colors min-h-[152px]"
+                className="w-full p-4 text-left hover:bg-gray-50 transition-colors min-h-[124px]"
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-900">
                       {branch.name}
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      {branch.area}
-                    </p>
-                    <p className="text-xs text-orange-500 font-medium mt-2">
+                    {branch.area ? (
+                      <p className="text-sm text-gray-600 mt-1">
+                        {branch.area}
+                      </p>
+                    ) : null}
+                    <p className="text-xs text-orange-500 font-medium mt-1">
                       Tap to view details
                     </p>
                   </div>
@@ -162,7 +167,7 @@ export default function Branches() {
                     </Button>
 
                     <Button
-                      onClick={() => openMaps(branch.address)}
+                      onClick={() => openMaps(branch.mapsUrl)}
                       size="icon"
                       variant="outline"
                       className="h-11 w-11 rounded-full border-gray-300 bg-white shadow-sm"
